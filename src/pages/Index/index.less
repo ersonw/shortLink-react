@@ -1,0 +1,240 @@
+@import '~antd/lib/style/themes/default.less';
+@minHeight: ~"(min-height: 500px)";
+@bgImg: '../../aseests/images/bg-lg.jpg';
+.index {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .topPartBg {
+    width: 100%;
+    height: 80vh;
+    transform: translate3d(0px, 0px, 0px);
+    background: url(@bgImg) no-repeat;
+    background-size: 100%;
+    //小于
+    @media screen and (max-device-height:500px){
+      height: 500px;
+      background-size: 100% 100%;
+    }
+    //大于
+    @media screen and (min-height:500px) {
+      height: 80vh;
+      background-size: 100%;
+    }
+  }
+  .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    filter:Alpha(Opacity=60);
+    opacity:0.5;
+    //小于
+    @media screen and (max-height:500px){
+      height: 500px;
+    }
+    //大于
+    @media screen and (min-height:500px) {
+      height: 80vh;
+    }
+  }
+  .topPart {
+    z-index: 9999;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  .generate {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    //小于
+    @media screen and (max-height:500px){
+      height: 500px;
+    }
+    //大于
+    @media screen and (min-height:500px) {
+      height: 80vh;
+    }
+    div:first-child {
+      text-align: center;
+      margin: 0 3vw;
+      > h1 {
+        font-weight: bold;
+        color: white;
+        font-size: 4vw;
+      }
+      > h2 {
+        color: white;
+        opacity: 0.6;
+      }
+    }
+    div:nth-child(2){
+      background-color: white;
+      width: 50vw;
+      border-radius: 6px;
+      @media screen and (max-width:730px){
+        width: 95vw;
+      }
+      //大于
+      @media screen and (min-width:720px) {
+        width: 570px;
+      }
+      div:first-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        >input {
+          width: 70%;
+          border-radius: 6px;
+        }
+        >button {
+          margin-left: 20px;
+          width: 25%;
+          border-radius: 6px;
+        }
+      }
+      >h2{
+        width: 80%;
+        font-size: 12px;
+        color: black;
+        opacity: 0.5;
+        margin-bottom: 10%;
+        margin-left: 5%;
+      }
+    }
+  }
+  .bodyText {
+    width: 100%;
+    text-align: center;
+    margin: 10% 3vw;
+    > h1 {
+      color: black;
+      font-size: 3vw;
+      font-weight: 300;
+    }
+    > h2 {
+      color: black;
+      opacity: 0.6;
+    }
+  }
+  .introduce{
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #ebebeb;
+    background: #fafafa;
+    @media screen and (max-width:770px){
+      flex-direction: column;
+    }
+    //大于
+    @media screen and (min-width:770px) {
+
+    }
+    .iconBox{
+      margin: 15px 6px;
+      border-radius: 6px;
+      background-color: white;
+      border: 1px solid #ebebeb;
+      @media screen and (max-width:770px){
+        width: 95vw;
+      }
+      //大于
+      @media screen and (min-width:770px) {
+        display: flex;
+        width: 30vw;
+      }
+      >div {
+        >h1{
+          margin: 15px 6px 3px 6px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+        >h2{
+          margin: 0 6px 15px 6px;
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .introduce1{
+    display: flex;
+    background-color: white;
+    margin: 30px;
+    >img{
+      width: 50vw;
+      @media screen and (max-width:770px){
+        width: 95vw;
+      }
+      //大于
+      @media screen and (min-width:770px) {
+        width: 50vw;
+      }
+    }
+    @media screen and (max-width:770px){
+      flex-direction: column;
+    }
+    >div {
+      margin: 15px;
+      text-align: center;
+      @media screen and (max-width:770px){
+        width: 95vw;
+      }
+      //大于
+      @media screen and (min-width:770px) {
+        width: 35vw;
+      }
+      >h1{
+      }
+      >h2 {
+        font-size: 15px;
+        opacity: 0.6;
+      }
+    }
+  }
+  .footer {
+    margin: 100px 15px 15px;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #252525;
+    >div:nth-child(2) {
+      margin-left: 10vw;
+      color: white;
+      >a{
+        color: white;
+        opacity: 0.9;
+      }
+    }
+    .menu {
+      background-color: transparent;
+      color: white;
+      display: flex;
+    }
+    .company{
+      display: flex;
+      text-align: center;
+      >h3{
+        color: white;
+        opacity: 0.6;
+        font-size: 1em;
+      }
+      >a{
+        color: white;
+        opacity: 0.6;
+        font-size: 1em;
+        margin-left: 15px;
+      }
+    }
+  }
+}
